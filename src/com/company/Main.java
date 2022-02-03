@@ -15,9 +15,16 @@ public class Main {
         double[] user1 = {2.3, 3.2, 4.4, -4.4, 6.7, -2.5, 9.7, -7.5, 3.5, -36.7, 4.7, -6.4, -3.5, 35.5, -7.8};
         double sum = 0;
         int i = 0;
+        boolean isIncrement = false;
 
         for (double notes : user1) {
-            if (notes > 0 && notes != 2.3 && notes != 3.2 && notes != 4.4) {
+
+            if (notes < 0) {
+                isIncrement = true;
+            }
+            if (notes > 0 && isIncrement) {
+
+
                 System.out.println(notes);
                 sum = sum + notes;
                 i++;
